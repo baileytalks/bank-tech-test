@@ -1,5 +1,6 @@
 require './lib/transaction_list'
 require './lib/single_transaction'
+require './lib/printer'
 require 'date'
 
 ## User Story 1:
@@ -27,8 +28,8 @@ class Account
   ## I first need to deposit money into my bank account.
   def deposit(amount)
     @balance += amount
-    hash = SingleTransaction.new(amount, @balance).make_hash
-    @transactions.push(hash)
+    transaction = SingleTransaction.new(amount, @balance).make_hash
+    @transactions.push(transaction)
   end
 
   ## User Story 4:
@@ -38,7 +39,12 @@ class Account
   def withdraw(amount)
     @balance -= amount
     amount = -amount
-    hash = SingleTransaction.new(amount, @balance).make_hash
-    @transactions.push(hash)
+    transaction = SingleTransaction.new(amount, @balance).make_hash
+    @transactions.push(transaction)
+  end
+
+  def print
+    Printer.new(@transactions).print
+    nil
   end
 end
