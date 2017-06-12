@@ -36,10 +36,17 @@ class Account
   ## I need to make withdrawals from my bank account.
   def withdraw(debit)
     @balance -= debit
+    hash = make_debit_hash(debit)
+    @transactions.push(hash)
   end
 
   def make_credit_hash(credit)
     date = DateTime.now.strftime('%d/%m/%Y')
     { date: date, credit: credit, debit: nil, balance: @balance }
+  end
+
+  def make_debit_hash(debit)
+    date = DateTime.now.strftime('%d/%m/%Y')
+    { date: date, credit: nil, debit: debit, balance: @balance }
   end
 end
