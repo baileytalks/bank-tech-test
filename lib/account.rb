@@ -1,4 +1,5 @@
-require 'transactions'
+require './lib/transactions'
+require 'date'
 
 ## User Story 1:
 ## As a client,
@@ -16,21 +17,29 @@ class Account
   ## I need to have a bank balance.
   def initialize
     @balance = 0
+    @transactions = Transactions.new.list
   end
 
   ## User Story 3:
   ## As a client,
   ## So I can spend money,
   ## I first need to deposit money into my bank account.
-  def deposit(amount)
-    @balance += amount
+  def deposit(credit)
+    @balance += credit
+    hash = make_credit_hash(credit)
+    @transactions.push(hash)
   end
 
   ## User Story 4:
   ## As a client,
   ## So I can spend money,
   ## I need to make withdrawals from my bank account.
-  def withdraw(amount)
-    @balance -= amount
+  def withdraw(debit)
+    @balance -= debit
+  end
+
+  def make_credit_hash(credit)
+    date = DateTime.now.strftime('%d/%m/%Y')
+    { date: date, credit: credit, debit: nil, balance: @balance }
   end
 end
