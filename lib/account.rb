@@ -43,6 +43,10 @@ class Account
     @transactions.push(transaction)
   end
 
+  ## User Story 5:
+  ## As a client,
+  ## So I can check my transactions match what my bank has recorded,
+  ## I need to see a printed bank statement.
   def print
     Printer.new(@transactions).print
     nil
