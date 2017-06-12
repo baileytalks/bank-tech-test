@@ -1,16 +1,42 @@
 # Bank Tech Test in Ruby
 
 ## Quickstart
-* Clone the repo onto your local machine
-* In your terminal, navigate to the relevant directory
-* On the command line, open IRB
-* Require the program:
+1. Clone the repo on your local machine
+2. In your terminal, navigate to the bank-tech-test directory
+3. Run 'bundle install' to install dependencies
+4. Run 'rspec' to run the tests
+5. To run the program, open irb
+4. Follow these instructions to run the program:
+i. Run the program and create a bank account:
 ```
-$ require './lib/account.rb'
+> require './lib/account.rb'
+=> true
+> account = Account.new
+=> #<Account:0x007fcde501f260 @balance=0, @transactions=[]>
 ```
-* Initialize an account with:
+ii. Deposit £10
 ```
-account = Account.new
+> account.deposit(10)
+=> [{:date=>"12/06/2017", :credit=>10, :debit=>nil, :balance=>10}]
+```
+iii. Withdraw £5
+```
+> account.withdraw(5)
+=> [{:date=>"12/06/2017", :credit=>10, :debit=>nil, :balance=>10}, {:date=>"12/06/2017", :credit=>nil, :debit=>5, :balance=>5}]
+
+```
+iv. Display the balance
+```
+> account.balance
+=> 5
+```
+v. Print a statement
+```
+> account.print
+date || credit || debit || balance
+12/06/2017 ||  || 5.00 || 5.00
+12/06/2017 || 10.00 ||  || 10.00
+ => nil 
 ```
 
 ## User stories
