@@ -33,4 +33,17 @@ describe Account do
     @account.deposit(10)
     expect(@account.balance).to eq 10
   end
+
+  ## User Story 4:
+  ## As a client,
+  ## So I can spend money,
+  ## I need to make withdrawals from my bank account.
+  it 'a client can withdraw money without an error' do
+    expect { @account.withdraw(10) }.to_not raise_error
+  end
+
+  it 'withdrawing money decreases the bank balance' do
+    @account.withdraw(10)
+    expect(@account.balance).to eq(-10)
+  end
 end
