@@ -10,6 +10,7 @@ describe Printer do
     ]
     @statement = Printer.new(@transaction_list)
   end
+
   ## User Story 5:
   ## As a client,
   ## So I can check my transactions match what my bank has recorded,
