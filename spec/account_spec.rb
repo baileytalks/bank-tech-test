@@ -7,9 +7,9 @@ require 'account'
 
 describe Account do
   describe '#account' do
-    it 'initializes with a client name' do
-      account = Account.new('Client')
-      expect(account.name).to eq 'Client'
+    it 'when initialized, is an account' do
+      account = Account.new
+      expect(account).to be_an_instance_of(Account)
     end
   end
 end

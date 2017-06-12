@@ -30,3 +30,6 @@ Transactions should be listed by date, with the newest first.
 ## How I Started
 * Added a Gemfile with 'bundle init'
 * Added rspec, rubocop and simplecov to the gemfile and installed them
+* Added a .rspec file with formatting
+* Added a spec_helper file to set up Simplecov for coverage to appear on tests
+* Added a 'lib' folder and 'spec' folder
