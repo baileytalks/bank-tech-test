@@ -1,3 +1,5 @@
+require 'transactions'
+
 ## User Story 1:
 ## As a client,
 ## So I can save and spend money,
@@ -6,7 +8,7 @@
 ## This class has responsibility for holding a bank balance and
 ## changing that bank balance through deposits and withdrawals
 class Account
-  attr_reader :balance
+  attr_reader :balance, :transactions
 
   ## User Story 2:
   ## As a client,

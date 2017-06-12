@@ -1,5 +1,18 @@
 # Bank Tech Test in Ruby
 
+## Quickstart
+* Clone the repo onto your local machine
+* In your terminal, navigate to the relevant directory
+* On the command line, open IRB
+* Require the program:
+```
+$ require './lib/account.rb'
+```
+* Initialize an account with:
+```
+account = Account.new
+```
+
 ## User stories
 ```
 As a client,

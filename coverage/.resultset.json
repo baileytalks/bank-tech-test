@@ -53,6 +53,8 @@
         null
       ],
       "/Users/baileykursar/Projects/bank-tech-test/lib/account.rb": [
+        1,
+        null,
         null,
         null,
         null,
@@ -87,8 +89,31 @@
         2,
         null,
         null
+      ],
+      "/Users/baileykursar/Projects/bank-tech-test/lib/transactions.rb": [
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/baileykursar/Projects/bank-tech-test/spec/transactions_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1497265395
+    "timestamp": 1497266330
   }
 }
