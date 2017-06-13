@@ -7,6 +7,7 @@
 4. Run 'rspec' to run the tests
 5. To run the program, open irb
 4. Follow these instructions to run the program:
+
 i. Run the program and create a bank account:
 ```
 > require './lib/account.rb'
@@ -36,7 +37,7 @@ v. Print a statement
 date || credit || debit || balance
 12/06/2017 ||  || 5.00 || 5.00
 12/06/2017 || 10.00 ||  || 10.00
- => nil 
+ => nil
 ```
 
 ## User stories

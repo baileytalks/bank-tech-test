@@ -10,7 +10,7 @@ describe Account do
         "date || credit || debit || balance\n"
       transaction =
         "#{DateTime.now.strftime('%d/%m/%Y')} || 10.00 ||  || 10.00\n"
-      expect { @account.print }.to output(header + transaction).to_stdout
+      expect { @account.statement }.to output(header + transaction).to_stdout
     end
   end
 end

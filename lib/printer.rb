@@ -5,15 +5,6 @@ class Printer
     @transaction_list = transaction_list
   end
 
-  ## User Story 5:
-  ## As a client,
-  ## So I can check my transactions match what my bank has recorded,
-  ## I need to see a printed bank statement.
-
-  ## User Story 6:
-  ## As a client,
-  ## So I can review my bank statement efficiently,
-  ## Transactions should be listed by date, with the newest first.
   def print
     puts 'date || credit || debit || balance'
     @transaction_list.reverse.each do |t|
