@@ -1,16 +1,16 @@
-# Bank Tech Test (in Ruby)
+# 🏦 Bank Tech Test (in Ruby) 🏦
 
-A sample tech test, using Ruby. This program is a command line tool. Acceptance criteria as follows:
+A sample tech test, using Ruby. This program is a command line tool. Acceptance criteria below:
 
-### Requirements
-* You should be able to interact with the your code via a REPL like IRB or the JavaScript console. (You don't need to implement a command line interface that takes input from STDIN.)
-* Deposits, withdrawal.
-* Account statement (date, amount, balance) printing.
-* Data can be kept in memory (it doesn't need to be stored to a database or anything).
+### *Requirements*
+* *You should be able to interact with the your code via a REPL like IRB or the JavaScript console. (You don't need to implement a command line interface that takes input from STDIN.)*
+* *Deposits, withdrawal.*
+* *Account statement (date, amount, balance) printing.*
+* *Data can be kept in memory (it doesn't need to be stored to a database or anything).*
 
-### Acceptance criteria
+### *Acceptance criteria*
 
-Given a client makes a deposit of 1000 on 10-01-2012 And a deposit of 2000 on 13-01-2012 And a withdrawal of 500 on 14-01-2012 When she prints her bank statement Then she would see:
+*Given a client makes a deposit of 1000 on 10-01-2012 And a deposit of 2000 on 13-01-2012 And a withdrawal of 500 on 14-01-2012 When she prints her bank statement Then she would see:*
 ```
 date || credit || debit || balance
 14/01/2012 || || 500.00 || 2500.00
@@ -18,19 +18,19 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
-## Getting started
+## 🏁 Getting started
 
 `git clone git@github.com:baileytalks/bank-tech-test.git`
 `bundle`
+
+## Running tests
+
+`rspec`
 
 ## Usage
 
 `irb`
 `require './lib/account.rb'`
-
-## Running tests
-
-`rspec`
 
 Follow these instructions to run the program:
 
