@@ -1,37 +1,60 @@
-# Bank Tech Test in Ruby
+# Bank Tech Test (in Ruby)
 
-## Quickstart
-1. Clone the repo on your local machine
-2. In your terminal, navigate to the bank-tech-test directory
-3. Run 'bundle install' to install dependencies
-4. Run 'rspec' to run the tests
-5. To run the program, open irb
-4. Follow these instructions to run the program:
+A sample tech test, using Ruby. This program is a command line tool. Acceptance criteria as follows:
 
-i. Run the program and create a bank account:
+### Requirements
+* You should be able to interact with the your code via a REPL like IRB or the JavaScript console. (You don't need to implement a command line interface that takes input from STDIN.)
+* Deposits, withdrawal.
+* Account statement (date, amount, balance) printing.
+* Data can be kept in memory (it doesn't need to be stored to a database or anything).
+
+### Acceptance criteria
+
+Given a client makes a deposit of 1000 on 10-01-2012 And a deposit of 2000 on 13-01-2012 And a withdrawal of 500 on 14-01-2012 When she prints her bank statement Then she would see:
 ```
-> require './lib/account.rb'
-=> true
+date || credit || debit || balance
+14/01/2012 || || 500.00 || 2500.00
+13/01/2012 || 2000.00 || || 3000.00
+10/01/2012 || 1000.00 || || 1000.00
+```
+
+## Getting started
+
+`git clone git@github.com:baileytalks/bank-tech-test.git`
+`bundle`
+
+## Usage
+
+`irb`
+`require './lib/account.rb'`
+
+## Running tests
+
+`rspec`
+
+Follow these instructions to run the program:
+
+1. Run the program and create a bank account:
+```
 > account = Account.new
 => #<Account:0x007fcde501f260 @balance=0, @transactions=[]>
 ```
-ii. Deposit £10
+2. Deposit £10
 ```
 > account.deposit(10)
 => [{:date=>"12/06/2017", :credit=>10, :debit=>nil, :balance=>10}]
 ```
-iii. Withdraw £5
+3. Withdraw £5
 ```
 > account.withdraw(5)
 => [{:date=>"12/06/2017", :credit=>10, :debit=>nil, :balance=>10}, {:date=>"12/06/2017", :credit=>nil, :debit=>5, :balance=>5}]
-
 ```
-iv. Display the balance
+4. Display the balance
 ```
 > account.balance
 => 5
 ```
-v. Print a statement
+5. Print a statement
 ```
 > account.print
 date || credit || debit || balance
@@ -40,7 +63,7 @@ date || credit || debit || balance
  => nil
 ```
 
-## User stories
+## User stories satisfied
 ```
 As a client,
 So I can save and spend money,
@@ -66,10 +89,3 @@ As a client,
 So I can review my bank statement efficiently,
 Transactions should be listed by date, with the newest first.
 ```
-
-## How I Started
-* Added a Gemfile with 'bundle init'
-* Added rspec, rubocop and simplecov to the gemfile and installed them
-* Added a .rspec file with formatting
-* Added a spec_helper file to set up Simplecov for coverage to appear on tests
-* Added a 'lib' folder and 'spec' folder
