@@ -19,19 +19,19 @@ date || credit || debit || balance
 ```
 
 ## 🏁 Getting started
-
-`git clone git@github.com:baileytalks/bank-tech-test.git`
-`bundle`
-
+```
+git clone git@github.com:baileytalks/bank-tech-test.git
+bundle
+```
 ## Running tests
 
 `rspec`
 
 ## Usage
-
-`irb`
-`require './lib/account.rb'`
-
+```
+irb
+require './lib/account.rb'
+```
 Follow these instructions to run the program:
 
 1. Run the program and create a bank account:
@@ -63,7 +63,7 @@ date || credit || debit || balance
  => nil
 ```
 
-## User stories satisfied
+## 👨‍👩‍👧‍👦 User stories
 ```
 As a client,
 So I can save and spend money,
