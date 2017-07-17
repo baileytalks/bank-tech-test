@@ -19,49 +19,48 @@ date || credit || debit || balance
 ```
 
 ## 🏁 Getting started
-```
+````
 git clone git@github.com:baileytalks/bank-tech-test.git
-bundle
-```
+````
 ## Running tests
 
 `rspec`
 
 ## Usage
-```
+````
 irb
 require './lib/account.rb'
-```
+````
 Follow these instructions to run the program:
 
 1. Run the program and create a bank account:
-```
+````
 > account = Account.new
 => #<Account:0x007fcde501f260 @balance=0, @transactions=[]>
-```
+````
 2. Deposit £10
-```
+````
 > account.deposit(10)
 => [{:date=>"12/06/2017", :credit=>10, :debit=>nil, :balance=>10}]
-```
+````
 3. Withdraw £5
-```
+````
 > account.withdraw(5)
 => [{:date=>"12/06/2017", :credit=>10, :debit=>nil, :balance=>10}, {:date=>"12/06/2017", :credit=>nil, :debit=>5, :balance=>5}]
-```
+````
 4. Display the balance
-```
+````
 > account.balance
 => 5
-```
+````
 5. Print a statement
-```
-> account.print
+````
+> account.statement
 date || credit || debit || balance
 12/06/2017 ||  || 5.00 || 5.00
 12/06/2017 || 10.00 ||  || 10.00
  => nil
-```
+````
 
 ## 👨‍👩‍👧‍👦 User stories
 ```
